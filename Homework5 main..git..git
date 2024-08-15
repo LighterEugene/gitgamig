@@ -1,0 +1,54 @@
+public class HomeWork5 {
+
+    public static void main(String[] args) {
+        Employee[] employee = new Employee[5];
+        employee[0]  = new Employee("Derkach Yuri", "Medic", "YuriM@mailbox.com", 892312314, 40000, 40);
+        employee[1]  = new Employee("Ivanov Ivan", "Engineer", "Ivivan@mailbox.com", 892312312, 30000, 30);
+        employee[2]  = new Employee("Turkin Vasia", "Driver", "Turkin@mailbox.com", 892312732, 33000, 45);
+        employee[3]  = new Employee("Golovanov Fedor", "Politician", "GolovanovYourCandaite@mail.ru", 754312505, 50000, 42);
+        employee[4]  = new Employee("Dub Ivan", "Engineer", "dub@mailbox.com", 892312322, 31000, 32);
+        for (Employee employeeOlder40 : employee) {
+ if (employeeOlder40.getAge() > 40){
+            System.out.print(employeeOlder40);
+        }
+        System.out.println();
+    }
+    }
+
+
+
+
+
+
+
+}
+class Employee{
+    private String nameAndSurname;
+    private String occupation;
+    private String email;
+    private int phoneNumber;
+    private double salary;
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public Employee(String nameAndSurname, String occupation, String email, int phoneNumber, double salary, int age) {
+        this.nameAndSurname = nameAndSurname;
+        this.occupation = occupation;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.salary = salary;
+        this.age = age;
+    }
+    @Override
+    public String toString(){
+        return(nameAndSurname+ " - ФИО \n-"
+                +occupation+ " - должность\n-"
+                +email+ " - email\n"
+                +phoneNumber+ " - телефон \n"
+                +salary+ " - зарплата \n"
+                +age + " - возраст");
+    }
+}
